@@ -3,10 +3,10 @@ import board
 import digitalio
 
 
-# --- PINS (edit these if needed) ---
+# --- PINS ---
 RED_PIN = board.GP16
 BLUE_PIN = board.GP17
-THIRD_LED_PIN = board.GP11     # white or green LED
+GREEN_LED_PIN = board.GP11
 BUTTON_PIN = board.GP21
 
 
@@ -19,8 +19,8 @@ blue = digitalio.DigitalInOut(BLUE_PIN)
 blue.direction = digitalio.Direction.OUTPUT
 
 
-third = digitalio.DigitalInOut(THIRD_LED_PIN)
-third.direction = digitalio.Direction.OUTPUT
+green = digitalio.DigitalInOut(GREEN_LED_PIN)
+green.direction = digitalio.Direction.OUTPUT
 
 
 # --- Button (to GND) with pull-up ---
@@ -40,15 +40,15 @@ def set_mode(m):
    if m == 0:          # OFF
        red.value = False
        blue.value = False
-       third.value = False
+       green.value = False
    elif m == 1:        # PURPLE
        red.value = True
        blue.value = True
-       third.value = False
-   elif m == 2:        # WHITE/GREEN
+       green.value = False
+   elif m == 2:        # GREEN
        red.value = True
        blue.value = True
-       third.value = True
+       green.value = True
 
 
 set_mode(mode)
