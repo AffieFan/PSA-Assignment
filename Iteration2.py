@@ -32,7 +32,7 @@ btn.pull = digitalio.Pull.UP  # not pressed=True, pressed=False
 # Modes:
 # 0 = OFF
 # 1 = PURPLE (red+blue)
-# 2 = THIRD LED (white/green)
+# 2 = GREEN LED 
 mode = 0
 
 
