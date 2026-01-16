@@ -3,11 +3,10 @@ import board
 import digitalio
 
 
-# --- SET YOUR PINS HERE ---
-# If you used GP2/GP4/GP15 in Pico terms:
-# CircuitPython uses board.GP2, board.GP4, board.GP15
-purple_chain_pin = board.GP18   # your red+blue series chain
-green_pin = board.GP11          # your green LED
+# --- PIN SETTING ---
+
+purple_chain_pin = board.GP18   #red+blue series chain
+green_pin = board.GP11          #green LED
 button_pin = board.GP21        # button to GND
 
 
